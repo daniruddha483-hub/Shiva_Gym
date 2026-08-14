@@ -1,0 +1,299 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #f5f5f5;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ================================
+   APP
+================================ */
+
+.app {
+  min-height: 100vh;
+  background: #050505;
+  overflow-x: hidden;
+}
+
+
+/* ================================
+   COLOUR VARIABLES
+================================ */
+
+:root {
+  --black: #050505;
+  --black-light: #0b0b0b;
+
+  --grey-dark: #151515;
+  --grey: #242424;
+  --grey-light: #8d8d8d;
+
+  --yellow: #d9ff00;
+  --yellow-light: #e7ff55;
+
+  --white: #f5f5f5;
+  --muted: #a0a0a0;
+
+  --border: rgba(217, 255, 0, 0.15);
+
+  --container: 1200px;
+}
+
+
+/* ================================
+   COMMON CONTAINER
+================================ */
+
+.container {
+  width: min(90%, var(--container));
+  margin: 0 auto;
+}
+
+
+/* ================================
+   SECTION
+================================ */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-dark {
+  background: var(--black);
+}
+
+.section-grey {
+  background: var(--black-light);
+}
+
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+.section-tag {
+  display: inline-block;
+
+  color: var(--yellow);
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: var(--yellow);
+}
+
+.section-description {
+  max-width: 650px;
+
+  margin-top: 20px;
+
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 25px;
+
+  border-radius: 30px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: #050505;
+}
+
+.btn-primary:hover {
+  background: var(--yellow-light);
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(217, 255, 0, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+
+  color: var(--white);
+
+  border: 1px solid #444;
+}
+
+.btn-outline:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+
+  transform: translateY(-3px);
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.card {
+  background: var(--grey-dark);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  border-radius: 20px;
+
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--border);
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================================
+   YELLOW GLOW
+================================ */
+
+.yellow-glow {
+  text-shadow: 0 0 25px rgba(217, 255, 0, 0.25);
+}
+
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow);
+}
+
+
+/* ================================
+   SELECTION
+================================ */
+
+::selection {
+  background: var(--yellow);
+  color: #050505;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .btn {
+    padding: 12px 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 0.85rem;
+  }
+
+}
