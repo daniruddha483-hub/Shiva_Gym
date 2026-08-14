@@ -1,6 +1,6 @@
-# Shiva Multy Gym
+Shiva Multy Gym
 
-## About My Project
+ About My Project
 
 I'm currently building a website for Shiva Multy Gym, B.C Road as a BEEST project. Using React.js to build the website and I'm developing it step by step. 
 My aim is to create a modern, responsive, and professional-looking gym website instead of a basic static website.
