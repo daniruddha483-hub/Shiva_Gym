@@ -1,16 +1,74 @@
-# React + Vite
+Shiva Multy Gym
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ About My Project
 
-Currently, two official plugins are available:
+I'm currently building a website for Shiva Multy Gym, B.C Road as a BEEST project. Using React.js to build the website and I'm developing it step by step. 
+My aim is to create a modern, responsive, and professional-looking gym website instead of a basic static website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+What I'm Building
 
-## Expanding the ESLint configuration
+I'm currently working on different sections of the website, including:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Home page
+* About page
+* Programs page
+* Gallery page
+* Contact page
+* Navigation bar
+* Footer
+* Responsive design
+* Reusable React components
+
+I'm also working on improving the design and layout of each section as I continue developing the website.
+
+Technologies used:
+
+* React.js
+* JavaScript
+* JSX
+* CSS
+* React Router
+* Vite
+* Git
+* GitHub
+
+
+What I'm Learning
+
+While building this project, I'm learning how to:
+
+* Build websites using React
+* Create reusable components
+* Use React Router for navigation
+* Style websites using CSS
+* Create responsive layouts
+* Organize a React project
+* Use Git and GitHub for version control
+* Improve UI and user experience
+
+Current Status
+
+The website is still under development.
+
+I'm currently adding sections, improving the design, fixing layouts, and adding new features as I continue working on the project.
+
+This README will also be updated as I add more features to the website.
+
+Future Plans
+
+As I continue building the website, I plan to add:
+
+* Membership plans
+* Trainer information
+* Workout programs
+* More gallery content
+* Contact form functionality
+* More animations and interactions
+* Better mobile responsiveness
+* Additional gym-related features
+
+My Goal
+
+My goal is to build a complete and professional gym website while learning many things about React, JavaScript, CSS, UI design, and Git/GitHub.
