@@ -5,11 +5,12 @@ function Home() {
   return (
     <main className="home">
 
-      {/* ================= HERO ================= */}
+      {/*HERO */}
       <section className="hero">
 
         <div className="hero-bg-text">SHIVA</div>
 
+        {/* HERO CONTENT */}
         <div className="container hero-container">
 
           <div className="hero-content">
@@ -32,6 +33,7 @@ function Home() {
             </p>
 
             <div className="hero-buttons">
+
               <Link to="/programs" className="btn btn-primary">
                 Explore Programs
               </Link>
@@ -39,44 +41,61 @@ function Home() {
               <Link to="/contact" className="btn btn-outline">
                 Visit Us
               </Link>
+
             </div>
 
           </div>
 
+        </div>
 
-          {/* HERO IMAGE */}
-          <div className="hero-visual">
-  <img
-    src="/images/hero.png"
-    alt="Shiva Multy Gym"
-    className="hero-person"
-  />
 
-  <div className="hero-badge">
-    <strong>4.8</strong>
-    <span>★★★★★</span>
-    <small>45 Reviews</small>
-  </div>
+        {/* HERO IMAGE + FLOATING ELEMENTS */}
+        <div className="hero-visual">
 
-<a
-  href="https://maps.app.goo.gl/vvmbawD6n1fWztQn9"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hero-location-card"
->
-  <img
-    src="/images/location-icon.png"
-    alt="Location"
-    className="location-icon"
-  />
+          <img
+            src="/images/hro.png"
+            alt="Shiva Multy Gym"
+            className="hero-person"
+          />
 
-  <div>
-    <strong>BC Road</strong>
-    <small>Mangaluru, Karnataka</small>
-  </div>
-</a>
-</div>
 
+       
+          <div className="hero-badge">
+
+            <strong>4.8</strong>
+
+            <span>★★★★★</span>
+
+            <small>45 Reviews</small>
+
+          </div>
+
+
+
+          <a
+            href="https://maps.app.goo.gl/vvmbawD6n1fWztQn9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-location-card"
+          >
+
+            <img
+              src="/images/location-icon.png"
+              alt="Location"
+              className="location-icon"
+            />
+
+            <div>
+
+              <strong>BC Road</strong>
+
+              <small>
+                Mangaluru, Karnataka
+              </small>
+
+            </div>
+
+          </a>
 
         </div>
 
@@ -87,25 +106,55 @@ function Home() {
           <div className="container hero-strip-content">
 
             <div>
+
               <strong>
-                <p>05:00 AM- 09:00 AM </p>
-                <p>04:30 PM - 9:30 PM</p></strong> 
-              <span>Opening Timings</span>
+                <p>05:00 AM - 09:00 AM</p>
+                <p>04:30 PM - 09:30 PM</p>
+              </strong>
+
+              <span>
+                Opening Timings
+              </span>
+
             </div>
 
-            <div>
-              <strong>₹600</strong>
-              <span>Monthly</span>
-            </div>
 
             <div>
-              <strong>₹6000</strong>
-              <span>Yearly</span>
+
+              <strong>
+                ₹600
+              </strong>
+
+              <span>
+                Monthly
+              </span>
+
             </div>
 
+
             <div>
-              <strong>BC ROAD</strong>
-              <span>Bantwal, Karnataka</span>
+
+              <strong>
+                ₹6000
+              </strong>
+
+              <span>
+                Yearly
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                BC ROAD
+              </strong>
+
+              <span>
+                Bantwal, Karnataka
+              </span>
+
             </div>
 
           </div>
@@ -115,11 +164,12 @@ function Home() {
       </section>
 
 
-      {/* ================= ABOUT PREVIEW ================= */}
+      {/* ABOUT PREVIEW*/}
       <section className="section about-preview">
 
         <div className="container about-grid">
 
+          {/* IMAGE */}
           <div className="about-image">
 
             <img
@@ -128,13 +178,21 @@ function Home() {
             />
 
             <div className="image-label">
+
               <span>01</span>
-              <p>YOUR FITNESS<br />STARTS HERE.</p>
+
+              <p>
+                YOUR FITNESS
+                <br />
+                STARTS HERE.
+              </p>
+
             </div>
 
           </div>
 
 
+          {/* CONTENT */}
           <div className="about-content">
 
             <p className="section-tag">
@@ -160,6 +218,7 @@ function Home() {
             </p>
 
 
+            {/* POINTS */}
             <div className="about-points">
 
               <div>
@@ -180,7 +239,10 @@ function Home() {
             </div>
 
 
-            <Link to="/about" className="btn btn-primary">
+            <Link
+              to="/about"
+              className="btn btn-primary"
+            >
               More About Us
             </Link>
 
@@ -191,7 +253,7 @@ function Home() {
       </section>
 
 
-      {/* ================= PROGRAMS PREVIEW ================= */}
+      {/*PROGRAMS PREVIEW*/}
       <section className="section programs-preview">
 
         <div className="container">
@@ -199,6 +261,7 @@ function Home() {
           <div className="section-heading">
 
             <div>
+
               <p className="section-tag">
                 TRAINING
               </p>
@@ -207,9 +270,13 @@ function Home() {
                 FIND YOUR
                 <span> STRENGTH.</span>
               </h2>
+
             </div>
 
-            <Link to="/programs" className="view-link">
+            <Link
+              to="/programs"
+              className="view-link"
+            >
               View All →
             </Link>
 
@@ -218,12 +285,18 @@ function Home() {
 
           <div className="program-grid">
 
+            {/* PROGRAM 01 */}
             <article className="program-card">
 
-              <span className="program-number">01</span>
+              <span className="program-number">
+                01
+              </span>
 
               <div>
-                <h3>STRENGTH</h3>
+
+                <h3>
+                  STRENGTH
+                </h3>
 
                 <p>
                   Build strength and muscle through
@@ -233,17 +306,24 @@ function Home() {
                 <Link to="/programs">
                   Explore Program →
                 </Link>
+
               </div>
 
             </article>
 
 
+            {/* PROGRAM 02 */}
             <article className="program-card program-highlight">
 
-              <span className="program-number">02</span>
+              <span className="program-number">
+                02
+              </span>
 
               <div>
-                <h3>FITNESS</h3>
+
+                <h3>
+                  FITNESS
+                </h3>
 
                 <p>
                   Improve your stamina, conditioning
@@ -253,17 +333,24 @@ function Home() {
                 <Link to="/programs">
                   Explore Program →
                 </Link>
+
               </div>
 
             </article>
 
 
+            {/* PROGRAM 03 */}
             <article className="program-card">
 
-              <span className="program-number">03</span>
+              <span className="program-number">
+                03
+              </span>
 
               <div>
-                <h3>WEIGHT LOSS</h3>
+
+                <h3>
+                  WEIGHT LOSS
+                </h3>
 
                 <p>
                   Work towards a healthier physique
@@ -273,6 +360,7 @@ function Home() {
                 <Link to="/programs">
                   Explore Program →
                 </Link>
+
               </div>
 
             </article>
@@ -284,11 +372,12 @@ function Home() {
       </section>
 
 
-      {/* ================= MEMBERSHIP PREVIEW ================= */}
+      {/* MEMBERSHIP PREVIEW*/}
       <section className="membership-preview">
 
         <div className="container membership-container">
 
+          {/* TEXT */}
           <div className="membership-text">
 
             <p className="section-tag">
@@ -306,34 +395,69 @@ function Home() {
               and start your fitness journey today.
             </p>
 
-            <Link to="/contact" className="btn btn-primary">
+            <Link
+              to="/contact"
+              className="btn btn-primary"
+            >
               Get Started
             </Link>
 
           </div>
 
 
+          {/* PRICE CARD */}
           <div className="price-card">
 
             <div className="price-card-top">
-              <span>POPULAR</span>
-              <h3>MONTHLY</h3>
+
+              <span>
+                POPULAR
+              </span>
+
+              <h3>
+                MONTHLY
+              </h3>
+
             </div>
 
+
             <div className="price">
-              <strong>₹600</strong>
-              <span>/ month</span>
+
+              <strong>
+                ₹600
+              </strong>
+
+              <span>
+                / month
+              </span>
+
             </div>
+
 
             <div className="price-divider"></div>
 
+
             <ul>
-              <li>✓ Gym Access</li>
-              <li>✓ Fitness Equipment</li>
-              <li>✓ Flexible Training</li>
+
+              <li>
+                ✓ Gym Access
+              </li>
+
+              <li>
+                ✓ Fitness Equipment
+              </li>
+
+              <li>
+                ✓ Flexible Training
+              </li>
+
             </ul>
 
-            <Link to="/contact" className="price-link">
+
+            <Link
+              to="/contact"
+              className="price-link"
+            >
               Join Now →
             </Link>
 
@@ -344,7 +468,7 @@ function Home() {
       </section>
 
 
-      {/* ================= GALLERY PREVIEW ================= */}
+      {/*GALLERY PREVIEW*/}
       <section className="section gallery-preview">
 
         <div className="container">
@@ -352,6 +476,7 @@ function Home() {
           <div className="section-heading">
 
             <div>
+
               <p className="section-tag">
                 INSIDE SHIVA
               </p>
@@ -360,9 +485,13 @@ function Home() {
                 FEEL THE
                 <span> ENERGY.</span>
               </h2>
+
             </div>
 
-            <Link to="/gallery" className="view-link">
+            <Link
+              to="/gallery"
+              className="view-link"
+            >
               View Gallery →
             </Link>
 
@@ -371,25 +500,36 @@ function Home() {
 
           <div className="gallery-grid">
 
+            {/* LARGE IMAGE */}
             <div className="gallery-item gallery-large">
+
               <img
                 src="/images/gym interior .jpeg"
                 alt="Shiva Multy Gym"
               />
+
             </div>
 
+
+            {/* EQUIPMENT */}
             <div className="gallery-item">
+
               <img
                 src="/images/rack.jpeg"
                 alt="Gym equipment"
               />
+
             </div>
 
+
+            {/* INTERIOR */}
             <div className="gallery-item">
+
               <img
                 src="/images/interior 2.jpeg"
                 alt="Gym training"
               />
+
             </div>
 
           </div>
@@ -399,7 +539,7 @@ function Home() {
       </section>
 
 
-      {/* ================= FINAL CTA ================= */}
+      {/*FINAL CTA */}
       <section className="home-cta">
 
         <div className="cta-content">
@@ -417,7 +557,10 @@ function Home() {
             Your fitness journey starts with one decision.
           </p>
 
-          <Link to="/contact" className="btn btn-primary">
+          <Link
+            to="/contact"
+            className="btn btn-primary"
+          >
             Contact Us
           </Link>
 
