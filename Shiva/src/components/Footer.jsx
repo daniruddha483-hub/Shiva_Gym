@@ -8,11 +8,7 @@ function Footer() {
       <div className="footer-container">
 
         {/* BRAND */}
-        <div className="footer-brand">
-
-          <div className="footer-logo">
-            AD
-          </div>
+        <div className="footer-brand-section">
 
           <h2>
             SHIVA <span>MULTY GYM</span>
@@ -89,6 +85,7 @@ function Footer() {
             href="https://maps.app.goo.gl/vvmbawD6n1fWztQn9"
             target="_blank"
             rel="noopener noreferrer"
+            className="footer-map-link"
           >
             View on Google Maps →
           </a>
@@ -105,15 +102,21 @@ function Footer() {
           © 2026 Shiva Multy Gym. All rights reserved.
         </p>
 
-        <p>
+        <p className="footer-credit">
           Designed & Developed by{" "}
+
           <a
             href="https://dhota-portfolio.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
+            className="footer-portfolio-link"
+            aria-label="Visit AD portfolio"
           >
-            AD
+            <span className="footer-logo">
+              AD
+            </span>
           </a>
+
         </p>
 
       </div>

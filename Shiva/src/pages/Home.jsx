@@ -58,20 +58,6 @@ function Home() {
             className="hero-person"
           />
 
-
-       
-          <div className="hero-badge">
-
-            <strong>4.8</strong>
-
-            <span>★★★★★</span>
-
-            <small>45 Reviews</small>
-
-          </div>
-
-
-
           <a
             href="https://maps.app.goo.gl/vvmbawD6n1fWztQn9"
             target="_blank"
@@ -253,123 +239,147 @@ function Home() {
       </section>
 
 
-      {/*PROGRAMS PREVIEW*/}
-      <section className="section programs-preview">
+      {/* PROGRAMS PREVIEW */}
+<section className="section programs-preview">
 
-        <div className="container">
+  <div className="container">
 
-          <div className="section-heading">
+    <div className="section-heading">
 
-            <div>
+      <div>
 
-              <p className="section-tag">
-                TRAINING
-              </p>
+        <p className="section-tag">
+          TRAINING
+        </p>
 
-              <h2 className="section-title">
-                FIND YOUR
-                <span> STRENGTH.</span>
-              </h2>
+        <h2 className="section-title">
+          FIND YOUR
+          <span> STRENGTH.</span>
+        </h2>
 
-            </div>
+      </div>
 
-            <Link
-              to="/programs"
-              className="view-link"
-            >
-              View All →
-            </Link>
+      <Link
+        to="/programs"
+        className="view-link"
+      >
+        View All →
+      </Link>
 
-          </div>
-
-
-          <div className="program-grid">
-
-            {/* PROGRAM 01 */}
-            <article className="program-card">
-
-              <span className="program-number">
-                01
-              </span>
-
-              <div>
-
-                <h3>
-                  STRENGTH
-                </h3>
-
-                <p>
-                  Build strength and muscle through
-                  structured resistance training.
-                </p>
-
-                <Link to="/programs">
-                  Explore Program →
-                </Link>
-
-              </div>
-
-            </article>
+    </div>
 
 
-            {/* PROGRAM 02 */}
-            <article className="program-card program-highlight">
+    <div className="program-grid">
 
-              <span className="program-number">
-                02
-              </span>
+      {/* PROGRAM 01 */}
+      <article className="program-card">
 
-              <div>
+        <img
+          src="/images/strength.jpg"
+          alt="Strength training"
+          className="program-image"
+        />
 
-                <h3>
-                  FITNESS
-                </h3>
+        <div className="program-overlay"></div>
 
-                <p>
-                  Improve your stamina, conditioning
-                  and overall physical fitness.
-                </p>
+        <span className="program-number">
+          01
+        </span>
 
-                <Link to="/programs">
-                  Explore Program →
-                </Link>
+        <div className="program-content">
 
-              </div>
+          <h3>
+            STRENGTH
+          </h3>
 
-            </article>
+          <p>
+            Build strength and muscle through
+            structured resistance training.
+          </p>
 
-
-            {/* PROGRAM 03 */}
-            <article className="program-card">
-
-              <span className="program-number">
-                03
-              </span>
-
-              <div>
-
-                <h3>
-                  WEIGHT LOSS
-                </h3>
-
-                <p>
-                  Work towards a healthier physique
-                  with consistent training and effort.
-                </p>
-
-                <Link to="/programs">
-                  Explore Program →
-                </Link>
-
-              </div>
-
-            </article>
-
-          </div>
+          <Link to="/strength">
+            Explore Program →
+          </Link>
 
         </div>
 
-      </section>
+      </article>
+
+
+      {/* PROGRAM 02 */}
+      <article className="program-card program-highlight">
+
+        <img
+          src="/images/fitguy.jpg"
+          alt="Fitness training"
+          className="program-image"
+        />
+
+        <div className="program-overlay"></div>
+
+        <span className="program-number">
+          02
+        </span>
+
+        <div className="program-content">
+
+          <h3>
+            FITNESS
+          </h3>
+
+          <p>
+            Improve your stamina, conditioning
+            and overall physical fitness.
+          </p>
+
+          <Link to="/fitness">
+            Explore Program →
+          </Link>
+
+        </div>
+
+      </article>
+
+
+      {/* PROGRAM 03 */}
+      <article className="program-card">
+
+        <img
+          src="/images/weightloss.jpg"
+          alt="Weight loss training"
+          className="program-image"
+        />
+
+        <div className="program-overlay"></div>
+
+        <span className="program-number">
+          03
+        </span>
+
+        <div className="program-content">
+
+          <h3>
+            WEIGHT LOSS
+          </h3>
+
+          <p>
+            Work towards a healthier physique
+            with consistent training and effort.
+          </p>
+
+          <Link to="/weight-loss">
+            Explore Program →
+          </Link>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* MEMBERSHIP PREVIEW*/}
@@ -504,7 +514,7 @@ function Home() {
             <div className="gallery-item gallery-large">
 
               <img
-                src="/images/gym interior .jpeg"
+                src="/images/gym interior.jpeg"
                 alt="Shiva Multy Gym"
               />
 
@@ -526,7 +536,7 @@ function Home() {
             <div className="gallery-item">
 
               <img
-                src="/images/interior 2.jpeg"
+                src="/images/gym-int.jpeg"
                 alt="Gym training"
               />
 
