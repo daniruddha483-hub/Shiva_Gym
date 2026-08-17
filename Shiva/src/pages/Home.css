@@ -11,7 +11,7 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 850px;
+  min-height: 800px;
 
   background-color: #050505;
 
@@ -105,7 +105,7 @@
 
   color: var(--yellow);
 
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 
   font-weight: 900;
 
@@ -192,8 +192,8 @@
 .hero-person {
   position: absolute;
 
-  left: 70%;
-  bottom: 100px;
+  left: 65%;
+  bottom: 90px;
 
   transform: translateX(-50%);
 
@@ -345,7 +345,7 @@
 
   color: #fff;
 
-  font-size: 0.65rem;
+  font-size: 0.73rem;
 
   letter-spacing: 2px;
 
@@ -362,7 +362,7 @@
 
   color: rgba(255, 255, 255, 0.55);
 
-  font-size: 0.5rem;
+  font-size: 0.65rem;
 
   font-weight: 800;
 
@@ -507,7 +507,7 @@
 
 .hero-location-card small {
   color: rgba(5, 5, 5, 0.6);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
 }
 
 
@@ -1111,7 +1111,7 @@
 
   border-radius: 20px;
 
-  font-size: 0.55rem;
+  font-size: 0.75rem;
 
   font-weight: 900;
 }
@@ -1320,14 +1320,16 @@
 
 
   .hero-person {
+    position: absolute;
     width: 570px;
-    left: 85%;
+    left: 80%;
+    bottom: 105px;
   }
 
 
   .hero-badge {
     right: 5%;
-
+ bottom: 105px;
     top: 140px;
   }
 
@@ -1398,7 +1400,7 @@
 
 
   .hero-tag {
-    font-size: 0.75rem;
+    font-size: 0.79rem;
 
     letter-spacing: 2px;
   }
@@ -1426,9 +1428,10 @@
 
 
   .hero-person {
+    position: absolute;
     width: 500px;
-
-    left: 95%;
+ bottom: 105px;
+    left: 85%;
   }
 
 
@@ -1449,7 +1452,7 @@
 
 
   .hero-badge span {
-    font-size: 0.7rem;
+    font-size: 0.79rem;
   }
 
 
@@ -1559,8 +1562,10 @@
 
 
   .hero-person {
+    position: absolutes;
     width: 440px;
     left: 95%;
+    bottom: 105px;
   }
 
 
@@ -1581,7 +1586,7 @@
 
 
   .hero-badge small {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
 
 
@@ -1602,7 +1607,7 @@
 
 
   .hero-location-card small {
-    font-size: 0.6rem;
+    font-size: 0.7.5rem;
   }
 
 
@@ -1614,12 +1619,12 @@
 
 
   .hero-strip strong {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
 
 
   .hero-strip span {
-    font-size: 0.55rem;
+    font-size: 0.75rem;
   }
 
 
