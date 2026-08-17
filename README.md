@@ -1,4 +1,4 @@
-Shiva Multy Gym
+Shiva Multi Gym
 
  About My Project
 
