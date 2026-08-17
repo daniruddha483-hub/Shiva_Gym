@@ -530,14 +530,34 @@
   width: 38px;
   height: 38px;
 
-  object-fit: contain;
+  padding: 8px;
+
+  box-sizing: border-box;
 
   flex-shrink: 0;
 
   border-radius: 10px;
+
+  background: #e0ef0f24;
+
+  color: var(--black);
+
+  stroke-width: 2.5;
+
+  box-shadow:
+    0 0 12px rgba(210, 255, 0, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/*HERO BOTTOM STRIP*/
+.hero-location-card:hover .location-icon {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 18px rgba(210, 255, 0, 0.35);
+}
 
 .hero-strip {
   position: absolute;
@@ -610,7 +630,7 @@
 .hero-strip span {
   color: #666;
 
-  font-size: 0.6rem;
+  font-size: 0.75rem;
 
   text-transform: uppercase;
 
@@ -711,7 +731,7 @@
 
 
 .image-label p {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
 
   font-weight: 900;
 
@@ -756,7 +776,7 @@
 .about-points span {
   color: var(--yellow);
 
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 
   font-weight: 900;
 }
@@ -765,7 +785,7 @@
 .about-points p {
   color: #ccc;
 
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .section-heading {
@@ -788,7 +808,7 @@
 .view-link {
   color: var(--yellow);
 
-  font-size: 0.7rem;
+  font-size: 0.79rem;
 
   font-weight: 900;
 
@@ -914,7 +934,7 @@
 
   color: var(--yellow);
 
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 
   font-weight: 900;
 
@@ -953,7 +973,7 @@
 
   color: rgba(255, 255, 255, 0.68);
 
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 
   line-height: 1.6;
 }
@@ -962,7 +982,7 @@
 .program-content a {
   color: var(--yellow);
 
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 
   font-weight: 900;
 
@@ -1120,7 +1140,7 @@
 .price span {
   color: #666;
 
-  font-size: 0.7rem;
+  font-size: 0.85rem;
 }
 
 
@@ -1147,14 +1167,14 @@
 .price-card li {
   color: #ccc;
 
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 
 .price-link {
   color: var(--yellow);
 
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 
   font-weight: 900;
 
@@ -1378,7 +1398,7 @@
 
 
   .hero-tag {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
 
     letter-spacing: 2px;
   }
@@ -1429,7 +1449,7 @@
 
 
   .hero-badge span {
-    font-size: 0.55rem;
+    font-size: 0.7rem;
   }
 
 
@@ -1520,7 +1540,7 @@
 
 
   .hero-description {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 
     line-height: 1.6;
   }
@@ -1561,7 +1581,7 @@
 
 
   .hero-badge small {
-    font-size: 0.45rem;
+    font-size: 0.6rem;
   }
 
 
@@ -1577,12 +1597,12 @@
 
 
   .hero-location-card strong {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 
 
   .hero-location-card small {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 
 
@@ -1599,7 +1619,7 @@
 
 
   .hero-strip span {
-    font-size: 0.48rem;
+    font-size: 0.55rem;
   }
 
 

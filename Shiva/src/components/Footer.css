@@ -103,7 +103,7 @@
 
   color: #777;
 
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 
   line-height: 1.7;
 }
@@ -133,7 +133,7 @@
 
   color: #aaa;
 
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 
   text-decoration: none;
 
@@ -179,7 +179,7 @@
 
   color: var(--yellow);
 
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 
   font-weight: 900;
 
@@ -282,7 +282,7 @@
 
   color: #666666;
 
-  font-size: 0.7rem;
+  font-size: 0.79rem;
 
   line-height: 1.5;
 }
@@ -295,7 +295,7 @@
 
   color: var(--yellow) !important;
 
-  font-size: 0.7rem !important;
+  font-size: 0.75rem !important;
 
   font-weight: 800;
 
@@ -335,7 +335,7 @@
 
   color: #555;
 
-  font-size: 0.65rem;
+  font-size: 0.7rem;
 
   line-height: 1.5;
 }
@@ -440,6 +440,18 @@
     );
 }
 
+.justdial-link {
+  color: #888 !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.justdial-link:hover {
+  color: #fff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
 
 /* Tablet */
 
@@ -524,7 +536,7 @@
 
 
   .footer-bottom p {
-    font-size: 0.62rem;
+    font-size: 0.7rm;
   }
 
 }

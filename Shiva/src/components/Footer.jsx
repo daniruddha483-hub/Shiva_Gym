@@ -62,7 +62,7 @@ function Footer() {
         </div>
 
 
-        {/* CONTACT */}
+
         <div className="footer-contact">
 
           <h3>
@@ -95,31 +95,37 @@ function Footer() {
       </div>
 
 
-      {/* BOTTOM */}
-      <div className="footer-bottom">
+     <div className="footer-bottom">
 
-        <p>
-          © 2026 Shiva Multy Gym. All rights reserved.
-        </p>
+  <p>
+    © 2026 Shiva Multy Gym. All rights reserved.
+  </p>
 
-        <p className="footer-credit">
-          Designed & Developed by{" "}
+  <p>
+    4.7 ★ on{" "}
+    <a
+      href="https://www.justdial.com/Jodumarga/Siva-Multy-Gym-Bantwal-Jodumarga/9999P8255-8255-170723174420-Q3U5_BZDET"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="justdial-link"
+    >
+      Justdial
+    </a>
+  </p>
 
-          <a
-            href="https://dhota-portfolio.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-portfolio-link"
-            aria-label="Visit AD portfolio"
-          >
-            <span className="footer-logo">
-              AD
-            </span>
-          </a>
+  <p>
+    Designed by{" "}
+    <a
+      href="https://dhota-portfolio.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="footer-portfolio-link"
+    >
+      <span className="footer-logo">AD</span>
+    </a>
+  </p>
 
-        </p>
-
-      </div>
+</div>
 
     </footer>
   );

@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { FiMapPin } from "react-icons/fi";
 
 function Home() {
   return (
     <main className="home">
 
-      {/*HERO */}
       <section className="hero">
 
         <div className="hero-bg-text">SHIVA</div>
 
-        {/* HERO CONTENT */}
+   
         <div className="container hero-container">
 
           <div className="hero-content">
@@ -49,11 +49,11 @@ function Home() {
         </div>
 
 
-        {/* HERO IMAGE + FLOATING ELEMENTS */}
+        {/* HERO IMAGE*/}
         <div className="hero-visual">
 
           <img
-            src="/images/hro.png"
+            src="/images/heero.png"
             alt="Shiva Multy Gym"
             className="hero-person"
           />
@@ -65,11 +65,7 @@ function Home() {
             className="hero-location-card"
           >
 
-            <img
-              src="/images/location-icon.png"
-              alt="Location"
-              className="location-icon"
-            />
+          <FiMapPin className="location-icon" />
 
             <div>
 
@@ -150,12 +146,11 @@ function Home() {
       </section>
 
 
-      {/* ABOUT PREVIEW*/}
       <section className="section about-preview">
 
         <div className="container about-grid">
 
-          {/* IMAGE */}
+         
           <div className="about-image">
 
             <img
