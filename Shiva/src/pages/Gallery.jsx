@@ -1,10 +1,239 @@
+import { useEffect, useState } from "react";
 import "./Gallery.css";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaTimes
+} from "react-icons/fa";
+
 
 function Gallery() {
+
+  const members = [
+    {
+      id: 1,
+      images: [
+        "/images/gallery/member1.jpg",
+        "/images/gallery/member1p1.jpeg",
+        "/images/gallery/member1p2.jpg",
+      ],
+    },
+    {
+      id: 2,
+      images: [
+        "/images/gallery/member2.jpeg",
+        "/images/gallery/member2p1.jpeg",
+        "/images/gallery/member2p2.jpeg",
+      ],
+    },
+    {
+      id: 3,
+      images: [
+        "/images/gallery/member3.jpeg",
+        "/images/gallery/member3p1.jpeg",
+        "/images/gallery/member3p2.jpeg",
+      ],
+    },
+    {
+      id: 4,
+      images: [
+        "/images/gallery/member4.jpeg",
+        "/images/gallery/member4p1.jpeg",
+        "/images/gallery/member4p2.jpeg",
+      ],
+    },
+    {
+      id: 5,
+      images: [
+        "/images/gallery/member5.jpeg",
+        "/images/gallery/member5p1.jpeg",
+        "/images/gallery/member5p2.jpeg",
+      ],
+    },
+    {
+      id: 6,
+      images: [
+        "/images/gallery/member6.jpeg",
+        "/images/gallery/member6p1.jpeg",
+        "/images/gallery/member6p2.jpeg",
+      ],
+    },
+    {
+      id: 7,
+      images: [
+        "/images/gallery/member7.jpeg",
+        "/images/gallery/member7p1.jpeg",
+        "/images/gallery/member7p2.jpeg",
+      ],
+    },
+    {
+      id: 8,
+      images: [
+        "/images/gallery/member8.jpeg",
+        "/images/gallery/member8p1.jpeg",
+        "/images/gallery/member8p2.jpeg",
+      ],
+    },
+    {
+      id: 9,
+      images: [
+        "/images/gallery/member9.jpeg",
+        "/images/gallery/member9p1.jpeg",
+        "/images/gallery/member9p2.jpeg",
+      ],
+    },
+  ];
+
+
+  const [availableImages, setAvailableImages] = useState({});
+
+  const [currentImages, setCurrentImages] = useState(
+    members.reduce((acc, member) => {
+      acc[member.id] = 0;
+      return acc;
+    }, {})
+  );
+
+  const [selectedMember, setSelectedMember] = useState(null);
+
+  const [selectedImage, setSelectedImage] = useState(0);
+
+
+  /* CHECK WHICH IMAGES ACTUALLY EXIST */
+
+  useEffect(() => {
+
+    members.forEach((member) => {
+
+      member.images.forEach((image) => {
+
+        const img = new Image();
+
+        img.onload = () => {
+
+          setAvailableImages((prev) => ({
+
+            ...prev,
+
+            [member.id]: [
+              ...(prev[member.id] || []),
+              image,
+            ].filter(
+              (value, index, array) =>
+                array.indexOf(value) === index
+            ),
+
+          }));
+
+        };
+
+        img.src = image;
+
+      });
+
+    });
+
+  }, []);
+
+
+  /* AUTOMATICALLY CHANGE IMAGES */
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setCurrentImages((prev) => {
+
+        const next = { ...prev };
+
+        members.forEach((member) => {
+
+          const images =
+            availableImages[member.id] || [];
+
+          if (images.length > 1) {
+
+            next[member.id] =
+              (prev[member.id] + 1) %
+              images.length;
+
+          }
+
+        });
+
+        return next;
+
+      });
+
+    }, 4000);
+
+    return () => clearInterval(interval);
+
+  }, [availableImages]);
+
+
+  /* OPEN LIGHTBOX */
+
+  function openMember(member) {
+
+    setSelectedMember(member);
+
+    setSelectedImage(0);
+
+  }
+
+
+  /* CLOSE LIGHTBOX */
+
+  function closeGallery() {
+
+    setSelectedMember(null);
+
+  }
+
+
+  /* NEXT IMAGE */
+
+  function nextImage() {
+
+    if (!selectedMember) return;
+
+    const images =
+      availableImages[selectedMember.id] || [];
+
+    if (images.length === 0) return;
+
+    setSelectedImage((prev) =>
+      (prev + 1) % images.length
+    );
+
+  }
+
+
+  /* PREVIOUS IMAGE */
+
+  function previousImage() {
+
+    if (!selectedMember) return;
+
+    const images =
+      availableImages[selectedMember.id] || [];
+
+    if (images.length === 0) return;
+
+    setSelectedImage((prev) =>
+      (prev - 1 + images.length) %
+      images.length
+    );
+
+  }
+
+
   return (
     <main className="gallery-page">
 
-     
+
+      {/* HERO */}
 
       <section className="gallery-hero">
 
@@ -30,13 +259,14 @@ function Gallery() {
       </section>
 
 
-   
+      {/* REELS */}
 
       <section className="gallery-reels">
 
         <div className="gallery-section-heading">
 
           <div>
+
             <p className="gallery-small-tag">
               FROM THE GYM
             </p>
@@ -44,6 +274,7 @@ function Gallery() {
             <h2>
               GYM <span>REELS</span>
             </h2>
+
           </div>
 
           <p>
@@ -56,7 +287,6 @@ function Gallery() {
 
         <div className="reels-grid">
 
-          
 
           <div className="reel-card">
 
@@ -162,13 +392,17 @@ function Gallery() {
             rel="noopener noreferrer"
             className="instagram-button"
           >
+
             <span>◎</span>
+
             VISIT OUR INSTAGRAM
+
           </a>
 
         </div>
 
       </section>
+
 
 
       <section className="members-gallery">
@@ -196,136 +430,151 @@ function Gallery() {
         </div>
 
 
+        {/* MEMBER COLLAGE */}
+
         <div className="member-grid">
 
-          <div className="member-photo member-photo-large">
+          {members.map((member, index) => {
+
+            const images =
+              availableImages[member.id] || [];
+
+            const image =
+              images[currentImages[member.id] || 0] ||
+              member.images[0];
+
+
+            const labels = [
+              "TRAIN HARD",
+              "STAY CONSISTENT",
+              "KEEP PUSHING",
+              "NO EXCUSES",
+              "ONE COMMUNITY",
+              "KEEP PUSHING",
+              "NO LIMITS",
+              "STAY STRONG",
+              "KEEP GRINDING",
+            ];
+
+
+            return (
+
+              <div
+                key={member.id}
+                className={`member-photo ${
+                  index === 0
+                    ? "member-photo-large"
+                    : ""
+                } ${
+                  index === 4
+                    ? "member-photo-wide"
+                    : ""
+                }`}
+                onClick={() => openMember(member)}
+              >
+
+              <div className="member-image-wrapper">
 
             <img
-              src="/images/gallery/member1.jpg"
-              alt="Shiva Multy Gym member training"
-            />
+            key={image}
+              src={image}
+              alt={`Shiva Multy Gym member ${member.id}`}
+              />
 
-            <div className="member-photo-overlay">
-              <strong>TRAIN HARD</strong>
-            </div>
+</div>
+                <div className="member-photo-overlay">
 
-          </div>
+                  <strong>
+                    {labels[index]}
+                  </strong>
 
+                </div>
 
-          <div className="member-photo">
+              </div>
 
-            <img
-              src="/images/gallery/member2.jpeg"
-              alt="Shiva Multy Gym member working out"
-            />
+            );
 
-            <div className="member-photo-overlay">
-              <strong>STAY CONSISTENT</strong>
-            </div>
+          })}
 
-          </div>
+        </div>
 
-
-          <div className="member-photo">
-
-            <img
-              src="/images/gallery/member3.jpeg"
-              alt="Shiva Multy Gym member training"
-            />
-
-            <div className="member-photo-overlay">
-              <strong>KEEP PUSHING</strong>
-            </div>
-
-          </div>
+      </section>
 
 
-          <div className="member-photo">
+      {/* LIGHTBOX */}
 
-            <img
-              src="/images/gallery/member4.jpeg"
-              alt="Shiva Multy Gym member exercising"
-            />
+      {selectedMember && (
 
-            <div className="member-photo-overlay">
-              <strong>NO EXCUSES</strong>
-            </div>
+        <div
+          className="member-lightbox"
+          onClick={closeGallery}
+        >
 
-          </div>
+         <button
+  className="lightbox-close"
+  onClick={closeGallery}
+  aria-label="Close gallery"
+>
+  <FaTimes />
+</button>
 
 
-          <div className="member-photo member-photo-wide">
+          <div
+            className="lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
 
             <img
-              src="/images/gallery/member5.jpeg"
-              alt="Shiva Multy Gym members training"
+              src={
+                (
+                  availableImages[selectedMember.id] ||
+                  [selectedMember.images[0]]
+                )[selectedImage]
+              }
+              alt={`Shiva Multy Gym member ${selectedMember.id}`}
             />
 
-            <div className="member-photo-overlay">
-              <strong>ONE COMMUNITY</strong>
-            </div>
 
-          </div>
+            {(availableImages[selectedMember.id] || [])
+              .length > 1 && (
 
+              <>
 
-          <div className="member-photo">
-
-            <img
-              src="/images/gallery/member6.jpeg"
-              alt="Shiva Multy Gym member training"
-            />
-
-            <div className="member-photo-overlay">
-              <strong>KEEP PUSHING</strong>
-            </div>
-
-          </div>
+                <button
+        className="lightbox-arrow lightbox-prev"
+        onClick={previousImage}
+        aria-label="Previous image"
+        >
+        <FaChevronLeft />
+        </button>
 
 
-          <div className="member-photo">
-
-            <img
-              src="/images/gallery/member7.jpeg"
-              alt="Shiva Multy Gym member training"
-            />
-
-            <div className="member-photo-overlay">
-              <strong>NO LIMITS</strong>
-            </div>
-
-          </div>
+                <button
+  className="lightbox-arrow lightbox-next"
+  onClick={nextImage}
+  aria-label="Next image"
+>
+  <FaChevronRight />
+</button>
 
 
+                <div className="lightbox-counter">
 
-          <div className="member-photo">
+                  {selectedImage + 1}
+                  {" / "}
+                  {availableImages[selectedMember.id].length}
 
-            <img
-              src="/images/gallery/member8.jpeg"
-              alt="Shiva Multy Gym member training"
-            />
+                </div>
 
-            <div className="member-photo-overlay">
-              <strong>STAY STRONG</strong>
-            </div>
+              </>
 
-          </div>
-
-          <div className="member-photo">
-
-            <img
-              src="/images/gallery/member9.jpeg"
-              alt="Shiva Multy Gym member training"
-            />
-
-            <div className="member-photo-overlay">
-              <strong>KEEP GRINDING</strong>
-            </div>
+            )}
 
           </div>
 
         </div>
 
-      </section>
+      )}
 
 
       {/* CTA */}
@@ -358,6 +607,7 @@ function Gallery() {
         </div>
 
       </section>
+
 
     </main>
   );
